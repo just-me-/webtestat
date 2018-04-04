@@ -41,7 +41,9 @@ img {
 }
 #varianten > ul ul > li{
 	list-style: disc; /* <!-- //das icon find ich nicht????-->*/
-	margin-left: 2rem
+	margin-left: 2rem;
+	font-weight: initial;
+	color: initial;
 }
 
 /* table */

@@ -193,26 +193,26 @@
                 <article id="varianten">
                     <h3>Taschenrechnervarianten</h3>
                     <ul>
-                        <li>Einfach</li>
+                        <li>Einfach
                             <ul>
                                 <li>Grundrechenarten, Prozentrechnung</li>
-                            </ul>
-                        <li>Finanzwirtschaft</li>
+                            </ul></li>
+                        <li>Finanzwirtschaft
                         <ul>
                             <li>Zinsrechnung, …</li>
                             <li>zum Beispiel der „Klassiker“ HP-12C (hergestellt seit 1981), HP 17 B (II) (hergestellt seit 1988)</li>
-                        </ul>
-                        <li>Boolesche Rechnungen</li>
+                        </ul></li>
+                        <li>Boolesche Rechnungen
                         <ul>
                             <li>Rechnen mit Dual-, Oktal- und Hexadezimalzahlen (z. B. TI Programmer)</li>
-                        </ul>
-                        <li>Wissenschaftlich</li>
+                        </ul></li>
+                        <li>Wissenschaftlich
                         <ul>
                             <li>Winkelfunktionen, Logarithmus, mathematische Statistik, …</li>
                             <li>zum Beispiel TI-30 (seit 1976 dieselbe Typbezeichnung für intern völlig unterschiedliche Geräte)</li>
-                        </ul>
+                        </ul></li>
                         <li>Programmierbarer Taschenrechner</li>
-                        <li>Grafikfähiger Taschenrechner</li>
+                        <li>Grafikfähiger Taschenrechner
                         <ul>
                             <li>Funktions-/Kurvendarstellung</li>
                             <li>ab 1985 Geräte von Casio (fx-Serie, aktuelles Modell fx 9860G SD)</li>
@@ -220,8 +220,8 @@
                             <li>ab 1993 der TI-82 und seine Nachfolger</li>
                             <li>aktuell der TI-84 Plus und TI-Nspire</li>
                             <li>Grafikrechner sind typischerweise auch programmierbar</li>
-                        </ul>
-                        <li>Computeralgebra-Rechner</li>
+                        </ul></li>
+                        <li>Computeralgebra-Rechner
                         <ul>
                             <li>grafikfähige Taschenrechner mit eingebautem Computeralgebra-Kern</li>
                             <li>erstes verbreitetes Gerät war der HP-48 von Hewlett-Packard (ab 1989),
@@ -229,7 +229,7 @@
                             1998) und Voyage 200 (ab 2002), TI-Nspire CAS (ab 2007)
                             von Texas Instruments, ClassPad 300 von Casio, HP 49g+ von
                             Hewlett-Packard</li>
-                        </ul>
+                        </ul></li>
                     </ul>
 
                     <!-- Variante Definition List Thing
@@ -394,9 +394,11 @@
                         </datalist>
                         <input type="search" name="search-term" list="search-suggestions" id="search-term"
                                aria-label="search term"/>
-                        <button class="search-icon" type="submit">
-                            Search
-                        </button>
+                        <label for="search-term">
+                            <button class="search-icon" type="submit">
+                                Search
+                            </button>
+                        </label>
                     </form>
                 </article>
 
@@ -405,13 +407,11 @@
 
         <aside>
             <h2>Neuen Autor registrieren</h2>
-            <!-- 2DO EVT label.. for -> id -->
-            <!-- FIXEN -->
             <form name="new-autor">
                 <fieldset>
                     <legend>Autor</legend>
                     <div><label for="form-gender-m">Herr</label><input id="form-gender-m" type="radio" name="gender" value="male" checked/></div>
-                    <div><label for ="form-gender-w">Frau</label><input id="form-gender-w"type="radio" name="gender" value="female"/></div>
+                    <div><label for ="form-gender-w">Frau</label><input id="form-gender-w" type="radio" name="gender" value="female"/></div>
                     <div><label for="form-name">Name</label><input id="form-name" type="text" name="name" required/></div>
                     <div><label for="form-mail">E-Mail</label><input id="form-mail" type="email" name="mail" required/></div>
                     <div><label for="form-website">Webseite</label><input id="form-website" type="url" name="website"/></div>
@@ -435,7 +435,7 @@
                         <label for="form-textowner">Ich bestätige, das ich keine Texte veröffentlichen werde, deren Urheber ich nicht bin.</label></div>
                         <div><input id="form-mediaowner" type="checkbox" name="verification" value="mediaowner"/>
                         <label for="form-mediaowner">Ich bestätige, das ich keine Medien veröffentlichen werden, deren Urheber ich nicht bin.</label></div>
-                        <div><input id="form-texttruth"type="checkbox" name="verification" value="texttruth"/>
+                        <div><input id="form-texttruth" type="checkbox" name="verification" value="texttruth"/>
                         <label for="form-texttruth">Ich bestätige, das nur Texte veröffentlichen werde, die nach bestem Treu und glauben der Wahrheit
                             entsprechen und eingereichte Medien Bilder nicht manipuliert wurden.</label></div>
                     </div>
