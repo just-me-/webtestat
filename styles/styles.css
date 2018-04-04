@@ -34,6 +34,15 @@ img {
 /* text */
 
 /* lists */
+#varianten > ul > li{
+	list-style: none;
+	font-weight: bold;
+	color: dodgerblue;
+}
+#varianten > ul ul > li{
+	list-style: disc; /* <!-- //das icon find ich nicht????-->*/
+	margin-left: 2rem
+}
 
 /* table */
 

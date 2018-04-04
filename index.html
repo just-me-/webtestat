@@ -192,7 +192,47 @@
 
                 <article id="varianten">
                     <h3>Taschenrechnervarianten</h3>
-                    <!-- 2Do EVT aös ul schreiben... -->
+                    <ul>
+                        <li>Einfach</li>
+                            <ul>
+                                <li>Grundrechenarten, Prozentrechnung</li>
+                            </ul>
+                        <li>Finanzwirtschaft</li>
+                        <ul>
+                            <li>Zinsrechnung, …</li>
+                            <li>zum Beispiel der „Klassiker“ HP-12C (hergestellt seit 1981), HP 17 B (II) (hergestellt seit 1988)</li>
+                        </ul>
+                        <li>Boolesche Rechnungen</li>
+                        <ul>
+                            <li>Rechnen mit Dual-, Oktal- und Hexadezimalzahlen (z. B. TI Programmer)</li>
+                        </ul>
+                        <li>Wissenschaftlich</li>
+                        <ul>
+                            <li>Winkelfunktionen, Logarithmus, mathematische Statistik, …</li>
+                            <li>zum Beispiel TI-30 (seit 1976 dieselbe Typbezeichnung für intern völlig unterschiedliche Geräte)</li>
+                        </ul>
+                        <li>Programmierbarer Taschenrechner</li>
+                        <li>Grafikfähiger Taschenrechner</li>
+                        <ul>
+                            <li>Funktions-/Kurvendarstellung</li>
+                            <li>ab 1985 Geräte von Casio (fx-Serie, aktuelles Modell fx 9860G SD)</li>
+                            <li>1989 bis heute die HP-48-49-Reihe</li>
+                            <li>ab 1993 der TI-82 und seine Nachfolger</li>
+                            <li>aktuell der TI-84 Plus und TI-Nspire</li>
+                            <li>Grafikrechner sind typischerweise auch programmierbar</li>
+                        </ul>
+                        <li>Computeralgebra-Rechner</li>
+                        <ul>
+                            <li>grafikfähige Taschenrechner mit eingebautem Computeralgebra-Kern</li>
+                            <li>erstes verbreitetes Gerät war der HP-48 von Hewlett-Packard (ab 1989),
+                            spätere Geräte zum Beispiel TI-92(+) (ab 1995), TI-89 (ab
+                            1998) und Voyage 200 (ab 2002), TI-Nspire CAS (ab 2007)
+                            von Texas Instruments, ClassPad 300 von Casio, HP 49g+ von
+                            Hewlett-Packard</li>
+                        </ul>
+                    </ul>
+
+                    <!-- Variante Definition List Thing
                     <dl>
                         <dt>Einfach</dt>
                         <dd>Grundrechenarten, Prozentrechnung</dd>
@@ -220,7 +260,7 @@
                             von Texas Instruments, ClassPad 300 von Casio, HP 49g+ von
                             Hewlett-Packard
                         </dd>
-                    </dl>
+                    </dl> -->
                     <div class="small grey">
                         Taschenrechnervarianten, Source Wikipedia:
                         <a href="https://de.wikipedia.org/wiki/Taschenrechner">de.wikipedia.org/wiki/Taschenrechner</a>
@@ -370,37 +410,34 @@
             <form name="new-autor">
                 <fieldset>
                     <legend>Autor</legend>
-                    <div class="gender">
-                        <span><label>Herr <input type="radio" name="gender" value="male" checked/></label></span>
-                        <span><label>Frau <input type="radio" name="gender" value="female"/></label></span>
-                    </div>
-                    <label>Name<input type="text" name="name" required/></label>
-                    <label>E-Mail<input type="email" name="mail" required/></label>
-                    <label>Webseite<input type="url" name="website"/></label>
-                    <label>Geburtsdatum<input type="datetime-local" name="birthday" required/></label>
-                    <label>
-                        Nationalität<select name="nationality" size="1" required>
+                    <div><label for="form-gender-m">Herr</label><input id="form-gender-m" type="radio" name="gender" value="male" checked/></div>
+                    <div><label for ="form-gender-w">Frau</label><input id="form-gender-w"type="radio" name="gender" value="female"/></div>
+                    <div><label for="form-name">Name</label><input id="form-name" type="text" name="name" required/></div>
+                    <div><label for="form-mail">E-Mail</label><input id="form-mail" type="email" name="mail" required/></div>
+                    <div><label for="form-website">Webseite</label><input id="form-website" type="url" name="website"/></div>
+                    <div><label for="form-bday">Geburtsdatum</label><input id="form-bday" type="datetime-local" name="birthday" required/></div>
+                    <div><label for="form-country">Nationalität</label>
+                        <select id="form-country" name="country" size="1" required>
                         <option value="" selected>--Wählen--</option>
                         <option value="CH">Switzerland</option>
                         <option value="DE">Deutschland</option>
                         <option value="FR">Frankreich</option>
                         <option value="IT">Italien</option>
                         <option value="AU">Österreich</option>
-                    </select>
-                    </label>
-                    <label>Profiltext<textarea name="text" rows="10" cols="100"></textarea></label>
-                    <label>Profilbilder <input type="file" name="images"/></label> <!-- evt multiple -->
+                    </select></div>
+                    <div><label for="form-text"> Profiltext</label><textarea id="form-text" name="text" rows="10" cols="100"></textarea></div>
+                    <div><label for="form-file">Profilbilder</label><input id="form-file" type="file" name="images" multiple/></div>
                 </fieldset>
                 <fieldset>
                     <legend>Rechtliches</legend>
                     <div class="verification">
-                        <label><input type="checkbox" value="textowner"/>
-                            Ich bestätige, das ich keine Texte veröffentlichen werde, deren Urheber ich nicht bin.</label>
-                        <label><input type="checkbox" name="verification" value="mediaowner"/>
-                            Ich bestätige, das ich keine Medien veröffentlichen werden, deren Urheber ich nicht bin.</label>
-                        <label><input type="checkbox" name="verification" value="texttruth"/>
-                            Ich bestätige, das nur Texte veröffentlichen werde, die nach bestem Treu und glauben der Wahrheit
-                            entsprechen und eingereichte Medien Bilder nicht manipuliert wurden.</label>
+                        <div><input id="form-textowner" type="checkbox" value="textowner"/>
+                        <label for="form-textowner">Ich bestätige, das ich keine Texte veröffentlichen werde, deren Urheber ich nicht bin.</label></div>
+                        <div><input id="form-mediaowner" type="checkbox" name="verification" value="mediaowner"/>
+                        <label for="form-mediaowner">Ich bestätige, das ich keine Medien veröffentlichen werden, deren Urheber ich nicht bin.</label></div>
+                        <div><input id="form-texttruth"type="checkbox" name="verification" value="texttruth"/>
+                        <label for="form-texttruth">Ich bestätige, das nur Texte veröffentlichen werde, die nach bestem Treu und glauben der Wahrheit
+                            entsprechen und eingereichte Medien Bilder nicht manipuliert wurden.</label></div>
                     </div>
                 </fieldset>
 
