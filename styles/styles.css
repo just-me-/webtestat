@@ -14,7 +14,16 @@ body {
 	font-family: "URW Gothic L", "Helvetica", "Arial", sans-serif;
 }
 
-
+/* general */
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+.clear {
+	clear: both;
+}
 
 /* images */
 
