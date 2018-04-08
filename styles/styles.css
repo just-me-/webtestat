@@ -56,16 +56,16 @@ nav dl dd {
 	margin-left: 1.5rem;
 }
 /* icons for nav */
-nav a[data-lang="en"]::before {
+nav a[hreflang="en"]::before {
 	background: url("../media/flag-en.svg") no-repeat;
 }
-nav a[data-lang="fr"]::before {
+nav a[hreflang="fr"]::before {
 	background: url("../media/flag-fr.svg") no-repeat;
 }
-nav a[data-lang="it"]::before {
+nav a[hreflang="it"]::before {
 	background: url("../media/flag-it.svg") no-repeat;
 }
-nav a[data-lang]::before {
+nav a[hreflang]::before {
 	display: inline-block;
 	background-size: 1.4rem 0.8rem;
 	width: 1.7em;
@@ -81,11 +81,11 @@ nav a[data-lang]::before {
 	margin-bottom: 1rem;
 }
 #demonstration figure {
-	width: 50vw
+	width: calc(55vw - 1.5rem);
 }
 #demonstration iframe {
 	width: 100%;
-	height: 52vw;
+	height: calc(56.25vw - 1.5rem);
 	border: none;
 	overflow: hidden;
 	border-radius: 15px;
@@ -93,7 +93,8 @@ nav a[data-lang]::before {
 	margin-bottom: 1rem;
 }
 #bedienung video {
-	width: 70%;
+	width: 100%;
+	max-width: 750px;
 	height: auto;
 }
 #bedienung small {
@@ -189,9 +190,9 @@ img {
 	color: initial;
 }
 
-/* table */
+/* table - use nth-child for coloring  */
 
-/* forms */
+/* forms - use  not() */
 label {
 	color: grey;
 }
