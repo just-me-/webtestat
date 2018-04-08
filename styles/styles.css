@@ -31,7 +31,6 @@ header {
 	margin-bottom: 3rem;
 	background-color: var(--main-color);
 	color: #ffffff;
-
 }
 header img {
 	height: auto;
@@ -101,8 +100,29 @@ nav a[hreflang]::before {
 	margin: 1.5rem 0;
 	display: inline-block;
 }
+#zeigewinn object {
+	width: 100%;
+	max-width: 700px;
+	height: auto;
+	margin: 0 auto;
+	display: block;
+}
+#iphone iframe {
+	width: 100%;
+	height: calc(56.25vw - 1.5rem);
+}
 
 /* foot */
+footer {
+	background-color: var(--main-color);
+	color: #ffffff;
+	padding: 1rem;
+	margin-top: 2rem;
+}
+footer a,
+footer small a {
+	color: inherit;
+}
 
 /* general */
 .left {
@@ -178,19 +198,57 @@ img {
 }
 
 /* lists */
-#varianten > ul > li{
+#varianten > ul > li {
 	list-style: none;
 	font-weight: bold;
-	color: dodgerblue;
+	color: var(--main-color);
 }
-#varianten > ul ul > li{
-	list-style: disc; /* <!-- //das icon find ich nicht????-->*/
+#varianten > ul ul > li {
+	list-style: none;
 	margin-left: 2rem;
-	font-weight: initial;
+	font-weight: 100;
 	color: initial;
+}
+#varianten > ul ul > li:before {
+	content: "\205C"; /* kein ähnlicheres auf anhieb gefunden; screenshot einbinden?  */
+	padding-right: 0.2em;
+}
+ol {
+	list-style-position: inside;
+	margin-bottom: 1em;
+}
+ol > li {
+	font-weight: lighter;
+	margin-bottom: 0.2em;
 }
 
 /* table - use nth-child for coloring  */
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+thead {
+	color: white;
+	background: var(--main-color);
+	border-top: solid black 0.3em;
+	border-bottom: solid black 0.3em;
+}
+th, td {
+	padding: 0.5rem;
+}
+tbody > tr > th {
+	text-align: left;
+	font-weight: bold;
+}
+tbody > tr > td {
+	text-align: center;
+	font-weight: lighter;
+}
+tr:nth-child(2n) {
+	background: #DBE6EF;
+	border-top: solid #BDD0E4 thin;
+	border-bottom: solid #BDD0E4 thin;
+}
 
 /* forms - use  not() */
 label {
