@@ -37,9 +37,11 @@ header img {
 	margin: 10px 5px 0 0;
 	width: 90px;
 }
-header h1 {
+header h1{
 	margin-top: 0.5rem;
 }
+
+
 /* navigation */
 nav {
 	padding: 0.5rem;
@@ -66,7 +68,7 @@ nav a[hreflang="it"]::before {
 }
 nav a[hreflang]::before {
 	display: inline-block;
-	background-size: 1.4rem 0.8rem;
+	background-size: 1.4rem 0.8rem;  /*das musst du mir noch erklären warum dasa funktioniert.. Warum ist das Bildchen ein background bild und nicht einfach nur das bild? und könnte dann hier nicht margin-left definiert (ohne das ::before im selector) sein, damit der text einrückt?*/
 	width: 1.7em;
 	height: 0.8rem;
 	content: '';
@@ -80,7 +82,7 @@ nav a[hreflang]::before {
 	margin-bottom: 1rem;
 }
 #demonstration figure {
-	width: calc(55vw - 1.5rem);
+	width: calc(55vw - 1.5rem); /* versteh ich das richtig, dass das 55% von dem, was man sieht ist, minus 1.5 rem? */
 }
 #demonstration iframe {
 	width: 100%;
@@ -88,7 +90,7 @@ nav a[hreflang]::before {
 	border: none;
 	overflow: hidden;
 	border-radius: 15px;
-	box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.75);
+	box-shadow: 0 0 10px 5px rgba(0,0,0,0.75);
 	margin-bottom: 1rem;
 }
 #bedienung video {
@@ -124,6 +126,10 @@ footer small a {
 	color: inherit;
 }
 
+footer img {
+	display: inline-block; /*<!-- wie kann man hier machen, dass das bildchen auf gleicher höhe wie der text angezeigt wird??2 also dass es zentriert auf der zeile is*/
+}
+
 /* general */
 .left {
 	float: left;
@@ -140,6 +146,7 @@ h1 {
 }
 h2 {
 	font-size: 2rem;
+	margin-top: 1em;
 }
 h3 {
 	font-size: 1.5rem;
@@ -210,7 +217,7 @@ img {
 	color: initial;
 }
 #varianten > ul ul > li:before {
-	content: "\205C"; /* kein ähnlicheres auf anhieb gefunden; screenshot einbinden?  */
+	content: "\2316";
 	padding-right: 0.2em;
 }
 ol {
@@ -224,7 +231,7 @@ ol > li {
 
 /* table - use nth-child for coloring  */
 table {
-	width: 100%;
+	width: 100%;  /* wollen wir hier nicht eine max width definieren? Die Tabelle ist sonst so breit, dass man sie kaum lesen kann */
 	border-collapse: collapse;
 }
 thead {
@@ -250,8 +257,11 @@ tr:nth-child(2n) {
 	border-bottom: solid #BDD0E4 thin;
 }
 
-/* forms - use  not() */
-label {
+/* forms - use  not() */     /*<--- ich hab noch nie was von not gehört, grad nochmal die Formular-Folien durchsucht... habs gegooget... naja, irgendwo ist es dann rasch noch pseudomässig eingebaut. vlt wärs für den bild-upload-button gedacht gewesen?*/
+
+/*slider*/
+
+#font-size-form > label {
 	color: grey;
 }
 
@@ -272,3 +282,91 @@ label {
 	height: 0.5rem;
 }
 
+/*Formular Punkt 8 und neuen Autor registrieren*/
+
+aside fieldset {
+	margin-top: 1em;
+	margin-bottom: 1em;
+	border: 1px solid lightgrey;
+	border-radius: 5px;
+	padding: 0.4rem;
+}
+
+legend {
+	color: black;
+	background: transparent; /* im PDF geht der Rahmen vom fieldset durch das Legend Tag durch, als wäre legend transparent. weiss net, wie das geht  TODO*/
+}
+
+aside label {  /* oben ist auch was mit label für den slider, soll man das noch verbinden? macht das Sinn? ich finde nicht. Finde es so klarer. Aber ist Geschmacksache */
+	color: grey;
+	display: inline-block;
+	margin-top: 1rem;
+}
+
+.gray-input-field {
+	background-color: #EEEEEE;
+	border: none;
+	border-bottom: 2px solid black;
+	padding: 0.2em;
+	margin: 0 0.1em;
+	font-family: inherit;              /*Hier ist gray input field und wide input field nicht nur eine klasse, weil das search feld nicht auch breit ist*/
+	font-size: inherit;
+}
+
+.wide-input-field {  /* <!-- hier nehme ich nicht fix input als selector, weil es ja auch type=radiobuttun und so zeug hat, und das textarea damit nicht selected wär */
+	display: block;
+	width: 98%;  /*kleine interessensfrage: 98% wovon ist dasd hier? Dokumentbreite oder breite vom übergeordneten Blockelement? */
+}
+
+.verification > div > label {
+	display: inline;   /*sonst ist eine zeile für kästchen und eine für text, wenn fenster zu dünn */
+}
+
+.verification > div > input {
+	margin-top: 1rem;   /*weil nun das label element kein margin mehr hat, da inline, müssen wir es hier definieren. Ein Gebastel, dieses CSS!*/
+}
+
+/*
+schaut schon doof aus....
+das valid oder invalid greift direkt....
+kriege es nicht ohne hin
+*/
+
+/*
+
+.wide-input-field:valid {
+	box-shadow: 0 0 3px 1px #005500;
+}
+
+.wide-input-field:invalid {
+	box-shadow: 0 0 3px 1px #FF0000;
+}
+
+.wide-input-field:focus {
+	box-shadow: 0 0 3px 1px #000055;
+}
+
+*/
+.blue-button {
+	background-color: var(--main-color);
+	border: none;
+	border-radius: 10px;
+	color: white;
+	font-size: 1em;
+	padding: 0.5em 1em;
+	margin: 0;
+	box-shadow: 0 0 10px 1px #555555;
+}
+
+#form-file-upload-button {
+	display: block;
+	padding: 0.2em;
+}
+
+.search-icon:before {
+	content: '\1F50E  ';
+}
+
+.search-icon {
+	padding: 0.15em 1em;
+}
