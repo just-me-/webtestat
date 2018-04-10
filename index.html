@@ -50,7 +50,7 @@
 
 		<main>
 			<!-- Schriftgrössenwechsler: optionale Aufgabe -->
-			<form id="font-size-form">
+			<form id="font-size-form" class="right">
 				<label for="font-slider">Schriftgrösse</label>
 				<input type="range" min="8" max="20" step="1" value="10" title="1" name="font-slider"
 					   id="font-slider" />
@@ -402,10 +402,10 @@
                             <option value="HG Productive">HG Productive</option>
                             <option value="HG GO-ON">HG GO-ON</option>
                         </datalist>
-                        <input class="gray-input-field" type="search" name="search-term" list="search-suggestions" id="search-term"
+                        <input type="search" name="search-term" list="search-suggestions" id="search-term"
                                aria-label="search term"/>
                         <label for="search-term"></label> <!-- Empty Label, gibt sonst fehler. -->
-                        <button class="search-icon blue-button" type="submit">Search</button>
+                        <button class="search-icon btn-primary" type="submit">Search</button>
                     </form>
                 </article>
 
@@ -427,23 +427,23 @@
                     </div>
                     <div>
                         <label for="form-name">Name</label>
-                        <input class="gray-input-field wide-input-field" id="form-name" type="text" name="name" required/>
+                        <input id="form-name" type="text" name="name" required/>
                     </div>
                     <div>
                         <label for="form-mail">E-Mail</label>
-                        <input class="gray-input-field wide-input-field" id="form-mail" type="email" name="mail" required/>
+                        <input id="form-mail" type="email" name="mail" required/>
                     </div>
                     <div>
                         <label for="form-website">Webseite</label>
-                        <input class="gray-input-field wide-input-field" id="form-website" type="url" name="website"/>
+                        <input id="form-website" type="url" name="website"/>
                     </div>
                     <div>
                         <label for="form-bday">Geburtsdatum</label>
-                        <input class="gray-input-field wide-input-field" id="form-bday" type="date" name="birthday" required/>
+                        <input id="form-bday" type="date" name="birthday" required/>
                     </div>
                     <div>
                         <label for="form-country">Nationalität</label>
-                        <select class="gray-input-field wide-input-field" id="form-country" name="country" size="1" required>
+                        <select id="form-country" name="country" size="1" required>
                             <option value="" selected>--W&auml;hlen--</option>
                             <option value="CH">Switzerland</option>
                             <option value="DE">Deutschland</option>
@@ -454,7 +454,7 @@
                     </div>
                     <div>
                         <label for="form-text">Profiltext</label>
-                        <textarea class="gray-input-field wide-input-field" id="form-text" name="text" rows="10" cols="100"></textarea>
+                        <textarea id="form-text" name="text" rows="10" cols="100"></textarea>
                     </div>
                     <div>
                         <label for="form-file-upload-button">Profilbilder</label>
@@ -483,8 +483,8 @@
                     </div>
                 </fieldset>
 
-                <button class="btn-primary blue-button" type="submit">Account anlegen</button> <!-- brauchts die klassen????-->
-                <button class="btn-reset blue-button" type="reset">Eingaben zurücksetzen</button>
+                <button class="btn-primary" type="submit">Account anlegen</button>
+                <button class="btn-reset" type="reset">Eingaben zurücksetzen</button>
             </form>
         </aside>
 
