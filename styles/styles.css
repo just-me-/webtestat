@@ -303,9 +303,10 @@ label, .grey {
 	color: gray;
 }
 aside label {
-	display: block;
 	margin-top: 1rem;
+	display: block;   /*Herr und Frau Radio Buttons müssen auf gleicher linie sein!!! TODO*/
 }
+
 .verification label {
 	display: inline;
 }
@@ -317,8 +318,9 @@ aside label {
 input[type=search]{
 	-moz-appearance: none;/* older firefox */
 	-webkit-appearance: none; /* safari, chrome */
-	appearance: none; /* rest */
+	appearance: none; /* rest */  /*unknown property TODO */
 }
+
 form input:not([type="file"]):not([type="radio"]):not([type="checkbox"]), textarea, select {
 	background-color: #EEEEEE;
 	border: none;
@@ -330,6 +332,7 @@ form input:not([type="file"]):not([type="radio"]):not([type="checkbox"]), textar
 	transition: all 1s; /* make it a little bit fancy */
 }
 form input:not([type="file"]):not([type="radio"]):not([type="checkbox"]):focus, textarea:focus {
+	box-shadow: inherit;
 	border-bottom-color: var(--main-color);
 	color: var(--main-color);
 	outline: none; /* deactivate safaries autofocus */
@@ -343,26 +346,9 @@ select {
 }
 
 form input:invalid,
-textareas:invalid {
+textarea:invalid {
 	box-shadow: 0 0 3px 1px #FF0000;
 }
-/* not red while texting */
-form input:focus:invalid,
-textareas:focus:invalid{
-	box-shadow: inherit;
-}
-
-/* 2Do
-.wide-input-field:valid {
-	box-shadow: 0 0 3px 1px #005500;
-}
-.wide-input-field:invalid {
-	box-shadow: 0 0 3px 1px #FF0000;
-}
-.wide-input-field:focus {
-	box-shadow: 0 0 3px 1px #000055;
-}
-*/
 
 .btn-primary, .btn-reset{
 	background-color: var(--main-color);
@@ -382,5 +368,6 @@ textareas:focus:invalid{
 
 .search-icon:before {
 	content: '\1F50E';
+	margin-right: 0.5rem;
 }
 
