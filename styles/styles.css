@@ -302,15 +302,13 @@ legend {
 label, .grey {
 	color: gray;
 }
-#contact label:not([for="form-gender-m"]):not([for="form-gender-w"]) {
+#contact label {
 	margin-top: 1rem;
 	display: block;
 }
-
-/*special treatement of radio buttons (because label must no be block display)*/
+/* radio labels */
 #contact label[for="form-gender-w"],
 #contact label[for="form-gender-m"]{
-	margin-top: 1rem;
 	display: inline-block;
 }
 
@@ -325,10 +323,10 @@ label, .grey {
 input[type=search]{
 	-moz-appearance: none;/* older firefox */
 	-webkit-appearance: none; /* safari, chrome */
-	appearance: none; /* rest */  /*unknown property TODO */
+	appearance: none; /* rest */
 }
 
-form input:not([type="file"]):not([type="radio"]):not([type="checkbox"]), textarea, select {    /*Kann man diese Selektoren wirlich so lassen?? Ich find die grauenhaft... (lang, unleserlich)*/
+form input:not([type="file"]):not([type="radio"]):not([type="checkbox"]), textarea, select {
 	background-color: #EEEEEE;
 	border: none;
 	border-bottom: 2px solid black;
@@ -352,8 +350,8 @@ select {
 	width: 100%;
 }
 
-form input:invalid.dirty,
-textarea:invalid.dirty {
+form input:invalid.touched,
+textarea:invalid.touched {
 	box-shadow: 0 0 3px 1px #FF0000;
 }
 
