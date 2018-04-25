@@ -26,7 +26,7 @@ function calculate () {
         case "/":
             return calculator.secondNumber === 0 ? undefined : (calculator.firstNumber / calculator.secondNumber);
         default:
-            consoloe.log("defaultP?? WTF=?");
+            console.log("defaultP?? WTF=? unknown button o.O");
             return undefined;
     }
 
@@ -54,6 +54,13 @@ function setFirstNumber(val) {
     calculator.firstNumber = val;
 }
 
+function setSecondNumber(val) {
+    calculator.secondNumber = val;
+}
+
+function getFirstNumber() {
+    return calculator.firstNumber;
+}
 
 /**
  * UI
@@ -62,6 +69,19 @@ function setFirstNumber(val) {
 function cleanDisplay() {
     upperDisplay.innerText = "";
     lowerDisplay.innerText = "";
+}
+
+function updateView() {
+    console.log(getFirstNumber());
+
+    if (getFirstNumber()===undefined || isNaN(getFirstNumber())){
+        upperDisplay.innerText = "Ein Fehler$Invalid#!?Error%3rR0r";
+        lowerDisplay.innerText = "";
+    } else {
+        lowerDisplay.innerText = getFirstNumber();
+        upperDisplay.innerText = "";
+    }
+
 }
 
 function numberPressed(e) {
@@ -80,14 +100,23 @@ function operatorPressed(e) {
     setOperator(e.target.value);
     setFirstNumber(parseInt(lowerDisplay.innerText));
     upperDisplay.innerText = lowerDisplay.innerText + " " + e.target.value;
-    lowerDisplay = "";
+    lowerDisplay.innerText = "";
+    //if (lowerDisplay.innerText = "eine nummer") nur operator setzen
+    //sonst das oben
+    //odder so irgendwie
 }
 
 
 
-function commandPressed(e) {
-    console.log("Cpommand");
+function cPressed() {
+    cleanDisplay();
+    cleanObject();
+}
 
+function solvePressed() {
+    setSecondNumber(parseInt(lowerDisplay.innerText));
+    checkCalculation();
+    updateView();
 }
 
 window.addEventListener('load', function() {
@@ -96,18 +125,16 @@ window.addEventListener('load', function() {
     lowerDisplay = document.getElementById("input");
     upperDisplay.innerText = "Welcome";
 
-    document.querySelectorAll("button.number").forEach( () => {
-        addEventListener("click", numberPressed);
+    document.querySelectorAll("button.number").forEach( (b) => {
+        b.addEventListener("click", numberPressed);
         }
     );
 
-    document.querySelectorAll("button.operator").forEach( () => {
-            addEventListener("click", operatorPressed);
+    document.querySelectorAll("button.operator").forEach( (b) => {
+        b.addEventListener("click", operatorPressed);
         }
     );
 
-    document.querySelectorAll("button.command").forEach( () => {
-            addEventListener("click", commandPressed);
-        }
-    );
+    document.getElementById("key-c").addEventListener("click", cPressed);
+    document.getElementById("key-=").addEventListener("click", solvePressed);
 });
