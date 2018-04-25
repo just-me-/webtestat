@@ -365,6 +365,9 @@ textarea:invalid.touched {
 	padding: 0.25em 1em;
 	margin: 0;
 }
+.btn-primary:hover, .btn-reset:hover {
+	color: #9DB6C1;
+}
 
 #form-file-upload-button {
 	display: block;
