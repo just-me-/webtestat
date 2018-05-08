@@ -1,4 +1,5 @@
 /* hier sind DOM Verbindungen erlaubt */
+"use strict";
 window.addEventListener("load", function() {
     const inputElements = document.querySelectorAll("form input");
 

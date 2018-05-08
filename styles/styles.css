@@ -24,7 +24,7 @@ body {
 	margin: 1.5rem;
 }
 /* head */
-header {
+#pageheader {
 	height: 4.5rem;
 	overflow: visible;
 	padding: 0 0.5rem;
@@ -144,6 +144,9 @@ footer img {
 }
 .clear {
 	clear: both;
+}
+.is-inline {
+	display: inline-block;
 }
 
 h1 {
@@ -365,7 +368,8 @@ textarea:invalid.touched {
 	padding: 0.25em 1em;
 	margin: 0;
 }
-.btn-primary:hover, .btn-reset:hover {
+.btn-primary:hover, .btn-reset:hover,
+.btn-primary:active, .btn-reset:active{
 	color: #9DB6C1;
 }
 

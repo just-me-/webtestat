@@ -1,2 +1,0 @@
-/* TR Logik */
-/*evt löschen*/

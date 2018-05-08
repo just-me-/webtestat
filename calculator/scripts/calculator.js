@@ -1,6 +1,7 @@
 /**
  * core
  */
+"use strict";
 
 let upperDisplay;
 let lowerDisplay;
@@ -26,14 +27,14 @@ function calculate () {
         case "/":
             return calculator.secondNumber === 0 ? undefined : (calculator.firstNumber / calculator.secondNumber);
         default:
-            console.log("defaultP?? WTF=? unknown button o.O");
+            //console.log("defaultP?? WTF=? unknown button o.O");
             return undefined;
     }
 
 }
 
 function checkCalculation () {
-    if (calculator.secondNumber != undefined) {
+    if (calculator.secondNumber !== undefined) {
         calculator.firstNumber = calculate();
         calculator.secondNumber = undefined;
     }
@@ -72,7 +73,7 @@ function cleanDisplay() {
 }
 
 function updateView() {
-    console.log(getFirstNumber());
+    // console.log(getFirstNumber());
 
     if (getFirstNumber()===undefined || isNaN(getFirstNumber())){
         upperDisplay.innerText = "Ein Fehler$Invalid#!?Error%3rR0r";
@@ -85,10 +86,10 @@ function updateView() {
 }
 
 function numberPressed(e) {
-    console.log("Number");
+    // console.log("Number");
     let buttonValue = parseInt(e.target.value);
 
-    if ( upperDisplay.innerText != "" && isNaN(parseInt(upperDisplay.innerText))) {
+    if ( upperDisplay.innerText !== "" && isNaN(parseInt(upperDisplay.innerText))) {
         cleanDisplay();
     }
 
@@ -96,7 +97,7 @@ function numberPressed(e) {
 }
 
 function operatorPressed(e) {
-    console.log("Operator");
+    // console.log("Operator");
     setOperator(e.target.value);
     setFirstNumber(parseInt(lowerDisplay.innerText));
     upperDisplay.innerText = lowerDisplay.innerText + " " + e.target.value;

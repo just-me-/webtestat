@@ -11,12 +11,11 @@
 		<link rel="icon" href="media/icon-wikipraktika.png" type="image/png">
 
 		<link rel="stylesheet" type="text/css" href="styles/styles.css">
-		<script src="scripts/core.js"></script>
 		<script src="scripts/UI.js"></script>
 		<script src="scripts/font-size.js"></script>
 	</head>
 	<body>
-		<header class="clear">
+		<header id="pageheader" class="clear">
 			<a href="" class="left">
 				<img src="media/logo-wikipraktika.svg" alt="Logo Wikipraktika"/>
 			</a>
@@ -57,17 +56,11 @@
 				<output name="font-size" id="font-size">1</output>
 			</form>
 
-			<!-- TODO -->
-			<!--
-				Schriftgrösse ---*--- 1
-			-->
-
-
             <section id="main-section">
                 <h2>Taschenrechner</h2>
 
                 <article id="taschenrechner">
-                    <h3>Taschenrechner</h3>
+                    <header><h3>Taschenrechner</h3></header>
                     <p>
                         Ein Taschenrechner ist eine tragbare, handliche elektronische Rechenmaschine,
                         mit deren Hilfe numerische Berechnungen ausgeführt werden können.
@@ -85,8 +78,8 @@
                         <img id="marchant-calculator" src="media/900px-SCM_Marchant_calculator.jpg" alt="1960s SCM Marchant calculator">
                         <figcaption>
                             By <a href="commons.wikimedia.org/wiki/User:Bilby" target="_blank">Bilby</a> - Own work,
-                            <a href="http://creativecommons.org/licenses/by/3.0" target="_blank">CC BY 3.0</a>,<br>
-                            https://commons.wikimedia.org/w/index.php?curid=10980797
+                            <a href="http://creativecommons.org/licenses/by/3.0" target="_blank">CC BY 3.0</a>,
+                            <span class="clear is-inline">https://commons.wikimedia.org/w/index.php?curid=10980797</span>
                         </figcaption>
                     </figure>
 
@@ -108,32 +101,34 @@
                         Instruments entwickelt.[1] Ein 1,5 kg schwerer Prototyp dieses ersten Taschenrechners ist
                         heute in der Smithsonian Institution ausgestellt. Auch dieser lief schon mit Batterien,
                         frühere Rechner benötigten einen Stromanschluss.
-                        Die ersten kommerziell vertriebenen Taschenrechner wurden 1969
-                        und 1970 von den japanischen Firmen Compucorp,
+                        Die ersten kommerziell vertriebenen Taschenrechner wurden <time datetime="1969-02-14 20:00">1969</time>
+                        und <time datetime="1970-02-14 20:00">1970</time> von den japanischen Firmen Compucorp,
                         Sanyo, Sharp und Canon hergestellt.
                         Intel entwickelte für die japanische Firma Busicom einen der ersten Mikroprozessoren,
-                        den Intel 4004, der 1971 auf den Markt kam und in dem Modell
+                        den Intel 4004, der <time datetime="1971-02-14 20:00">1971</time> auf den Markt kam und in dem Modell
                         Busicom 141-PF verwendet wurde.
                         Als erster Taschenrechner, der mit einem Verkaufspreis von 10.000 Yen für die breite Masse erschwinglich war,
-                        gilt der 1972 veröffentlichte Casio Mini.[2] 1972 brachte Texas
+                        gilt der <time datetime="1972-02-14 20:00">1972</time>
+                        veröffentlichte Casio Mini.[2] <time datetime="1972-02-14 20:00">1972</time> brachte Texas
                         Instruments den
                         Taschenrechner SR 10 mit dem eigenen Mikroprozessor TMS1000 heraus.
                         Diese Taschenrechner verfügten über wenig mehr als die vier Grundrechenarten.
-                        1971 stellte Bowmar den ersten in den USA erhältlichen
+                        <time datetime="1971-02-14 20:00">1971</time> stellte Bowmar den ersten in den USA erhältlichen
                         Taschenrechner her (Bowmar 901B/„Bowmar Brain“, Maße: 131 mm ×77 mm × 37 mm).
                         Er hatte vier Funktionen und ein achtstelliges rotes LED-Display. Verkauft wurde er für 240 US$.
-                        Bowmar musste 1976 schließen.
+                        Bowmar musste <time datetime="1976-02-14 20:00">1976</time> schließen.
                     </p>
                     <p>
-                        1972 erschien mit dem HP-35 von Hewlett-Packard der erste technisch-wissenschaftliche
+                        <time datetime="1972-02-14 20:00">1972</time> erschien mit dem HP-35 von Hewlett-Packard
+                        der erste technisch-wissenschaftliche
                         Taschenrechner mit trigonometrischen, logarithmischen und Exponentialrechnungs-Funktionen. Er
                         wurde ein Verkaufserfolg und leitete das Ende der damals noch weit verbreiteten Rechenschieber ein.
                         Einer seiner Entwickler war Steve Wozniak, der wenige Jahre später das Unternehmen Apple mitgründete
                         und als Computer-Ingenieur die Entwicklung des Personal Computer maßgeblich beeinflusste.
                     </p>
                     <p>
-                        Vor allem Hewlett Packard und Texas Instruments entwickelten ab 1974 auch programmierbare
-                        Taschenrechner.
+                        Vor allem Hewlett Packard und Texas Instruments entwickelten ab <time datetime="1974-02-14 20:00">1974</time>
+                        auch programmierbare Taschenrechner.
                     </p>
 
                     <h4>Numerische Genauigkeit</h4>
@@ -160,15 +155,15 @@
                 </article>
 
                 <article id="demonstration">
-                    <h3>Demonstration</h3>
+                    <header><h3>Demonstration</h3></header>
                     <figure>
-                        <iframe scrolling="no" src="calculator/index.html"></iframe>
-                        <figcaption>Casino Mini von 1972</figcaption>
+                        <iframe class="noscrolling" src="calculator/index.html"></iframe>
+                        <figcaption>Casino Mini von <time datetime="1972-02-14 20:00">1972</time></figcaption>
                     </figure>
                 </article>
 
                 <article id="bedienung">
-                    <h3>Bedienung des TI-Nspire CX CAS</h3>
+                    <header><h3>Bedienung des TI-Nspire CX CAS</h3></header>
                     <figure>
                         <video poster="media/ti-nspire-cx-cas.png" controls>
                             <source src="media/TI-Nspire%20CX%20CAS%203D%20Model.mp4" type="video/mp4"/>
@@ -190,7 +185,7 @@
                 </article>
 
                 <article id="varianten">
-                    <h3>Taschenrechnervarianten</h3>
+                    <header><h3>Taschenrechnervarianten</h3></header>
                     <ul>
                         <li>Einfach
                             <ul>
@@ -201,7 +196,9 @@
                         <li>Finanzwirtschaft
                             <ul>
                                 <li>Zinsrechnung, …</li>
-                                <li>zum Beispiel der „Klassiker“ HP-12C (hergestellt seit 1981), HP 17 B (II) (hergestellt seit 1988)</li>
+                                <li>zum Beispiel der „Klassiker“ HP-12C (hergestellt seit
+                                    <time datetime="1981-02-14 20:00">1981</time>), HP 17 B (II) (hergestellt seit 1988)
+                                </li>
                             </ul>
                         </li>
 
@@ -214,7 +211,9 @@
                         <li>Wissenschaftlich
                             <ul>
                                 <li>Winkelfunktionen, Logarithmus, mathematische Statistik, …</li>
-                                <li>zum Beispiel TI-30 (seit 1976 dieselbe Typbezeichnung für intern völlig unterschiedliche Geräte)</li>
+                                <li>zum Beispiel TI-30 (seit <time datetime="1976-02-14 20:00">1976</time> dieselbe
+                                    Typbezeichnung für intern völlig unterschiedliche Geräte)
+                                </li>
                             </ul>
                         </li>
 
@@ -223,9 +222,9 @@
                         <li>Grafikfähiger Taschenrechner
                             <ul>
                                 <li>Funktions-/Kurvendarstellung</li>
-                                <li>ab 1985 Geräte von Casio (fx-Serie, aktuelles Modell fx 9860G SD)</li>
-                                <li>1989 bis heute die HP-48-49-Reihe</li>
-                                <li>ab 1993 der TI-82 und seine Nachfolger</li>
+                                <li>ab <time datetime="1985-02-14 20:00">1985</time> Geräte von Casio (fx-Serie, aktuelles Modell fx 9860G SD)</li>
+                                <li><time datetime="1989-02-14 20:00">1989</time> bis heute die HP-48-49-Reihe</li>
+                                <li>ab <time datetime="1993-02-14 20:00">1993</time> der TI-82 und seine Nachfolger</li>
                                 <li>aktuell der TI-84 Plus und TI-Nspire</li>
                                 <li>Grafikrechner sind typischerweise auch programmierbar</li>
                             </ul>
@@ -284,7 +283,7 @@
                 </article>
 
                 <article id="zeigewinn">
-                    <h3>Zeitgewinn</h3>
+                    <header> <h3>Zeitgewinn</h3></header>
 
                     <table>
                         <caption>Zeitgewinn durch Benutzung eines Taschenrechners</caption>
@@ -349,7 +348,7 @@
                 </article>
 
                 <article id="iphone">
-                    <h3>iPhone calculator tricks</h3>
+                    <header><h3>iPhone calculator tricks</h3></header>
 
                     <figure>
                         <iframe src="https://www.youtube.com/embed/a7rcVgb41-0" role="application" allowfullscreen></iframe>
@@ -365,7 +364,7 @@
                 </article>
 
                 <article id="ranking">
-                    <h3>Die besten und schlechtesten Taschenrechner</h3>
+                    <header> <h3>Die besten und schlechtesten Taschenrechner</h3></header>
 
                     <p>In einer 2014 durchgeführten Benutzerbefragung schnitten die Modelle von Casino am Besten ab:</p>
                     <ol>
@@ -389,7 +388,7 @@
                 </article>
 
                 <article id="search-tr">
-                    <h3>Taschenrechner suchen nach Modell</h3>
+                    <header><h3>Taschenrechner suchen nach Modell</h3></header>
                     <form>
                         <datalist id="search-suggestions">
                             <option value="Mexico Instrument TI 30">Mexico Instrument TI 30</option>
