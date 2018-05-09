@@ -10,12 +10,12 @@ window.addEventListener("load", function() {
                 event.target.classList.add("touched");
             });
         }
-    )
+    );
     // if user tries to submit
     document.querySelector("aside .btn-primary").addEventListener("click", function() {
         inputElements.forEach(
             (el) => el.classList.add("touched")
-        )
+        );
     });
 
 });
