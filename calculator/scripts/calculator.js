@@ -1,8 +1,10 @@
 /**
  * core
  */
+
 "use strict";
 
+//Vars
 let upperDisplay;
 let lowerDisplay;
 
@@ -12,6 +14,7 @@ let calculator = {
     operator: undefined
 };
 
+//Methods
 function calculate () {
     if (calculator.firstNumber === undefined || calculator.secondNumber === undefined) {
         return undefined;
@@ -27,26 +30,23 @@ function calculate () {
         case "/":
             return calculator.secondNumber === 0 ? undefined : (calculator.firstNumber / calculator.secondNumber);
         default:
-            //console.log("defaultP?? WTF=? unknown button o.O");
+            //console.log("defaultP?? WTF=? unknown operator o.O");
             return undefined;
     }
-
 }
 
-function checkCalculation () {
-    if (calculator.secondNumber !== undefined) {
+function executeCalculation () {
         calculator.firstNumber = calculate();
         calculator.secondNumber = undefined;
-    }
 }
 
 function cleanObject() {
     calculator.firstNumber = undefined;
     calculator.secondNumber = undefined;
     calculator.operator = undefined;
-
 }
 
+// Setter and Getter
 function setOperator(val) {
     calculator.operator = val;
 }
@@ -72,9 +72,7 @@ function cleanDisplay() {
     lowerDisplay.innerText = "";
 }
 
-function updateView() {
-    // console.log(getFirstNumber());
-
+function updateViewAfterSolve() {
     if (getFirstNumber()===undefined || isNaN(getFirstNumber())){
         upperDisplay.innerText = "Ein Fehler$Invalid#!?Error%3rR0r";
         lowerDisplay.innerText = "";
@@ -82,13 +80,12 @@ function updateView() {
         lowerDisplay.innerText = getFirstNumber();
         upperDisplay.innerText = "";
     }
-
 }
 
 function numberPressed(e) {
-    // console.log("Number");
     let buttonValue = parseInt(e.target.value);
 
+    //In case error message is shown:
     if ( upperDisplay.innerText !== "" && isNaN(parseInt(upperDisplay.innerText))) {
         cleanDisplay();
     }
@@ -97,17 +94,16 @@ function numberPressed(e) {
 }
 
 function operatorPressed(e) {
-    // console.log("Operator");
     setOperator(e.target.value);
-    setFirstNumber(parseInt(lowerDisplay.innerText));
-    upperDisplay.innerText = lowerDisplay.innerText + " " + e.target.value;
-    lowerDisplay.innerText = "";
-    //if (lowerDisplay.innerText = "eine nummer") nur operator setzen
-    //sonst das oben
-    //odder so irgendwie
+
+    if (upperDisplay.innerText === "" || isNaN(getFirstNumber())) {
+        setFirstNumber(parseFloat(lowerDisplay.innerText));
+        upperDisplay.innerText = lowerDisplay.innerText + " " + e.target.value;
+        lowerDisplay.innerText = "";
+    } else {                                                                        //If just the operator is switched
+       upperDisplay.innerText = parseFloat(upperDisplay.innerText) + " " + e.target.value;
+    }
 }
-
-
 
 function cPressed() {
     cleanDisplay();
@@ -116,9 +112,18 @@ function cPressed() {
 
 function solvePressed() {
     setSecondNumber(parseInt(lowerDisplay.innerText));
-    checkCalculation();
-    updateView();
+    executeCalculation();
+    updateViewAfterSolve();
 }
+
+// function devLog(msg) {
+//     console.log(`****** ${msg} ******`);
+//     console.log("Upper Display: " + upperDisplay.innerText);
+//     console.log("Lower Display: " + lowerDisplay.innerText);
+//     console.log("First Number: " + calculator.firstNumber);
+//     console.log("Second Number: " + calculator.firstNumber);
+//     console.log("Operator: " + calculator.operator);
+// }
 
 window.addEventListener('load', function() {
     //initializing work
