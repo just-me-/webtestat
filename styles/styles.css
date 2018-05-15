@@ -82,7 +82,7 @@ nav a[hreflang]::before {
 	margin-bottom: 1rem;
 }
 #demonstration figure {
-	width: calc(55vw - 1.5rem);
+	width: calc(55vw - 3rem);
 }
 #demonstration iframe {
 	width: 100%;
@@ -142,8 +142,12 @@ footer img {
 .right {
 	float: right;
 }
-.clear {
+.ciear {
 	clear: both;
+}
+.stupidValidatorAdditions {
+	display: none;
+	visibility: hidden; /* just in case... */
 }
 .is-inline {
 	display: inline-block;
@@ -382,4 +386,3 @@ textarea:invalid.touched {
 	content: '\1F50E';
 	margin-right: 0.5rem;
 }
-

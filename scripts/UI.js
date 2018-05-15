@@ -1,12 +1,13 @@
 /* hier sind DOM Verbindungen erlaubt */
 
-"use strict";
+// "use strict";
 
 window.addEventListener("load", function() {
+    "use strict";
     const inputElements = document.querySelectorAll("form input");
 
     // add class when touched
-    inputElements.forEach( 
+    inputElements.forEach(
         (el) => {
             el.addEventListener("blur", function() {
                 event.target.classList.add("touched");
